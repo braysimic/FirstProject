@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GPAForm));
             this.lblInstruction = new System.Windows.Forms.Label();
             this.txtClassName1 = new System.Windows.Forms.TextBox();
             this.txtClassName4 = new System.Windows.Forms.TextBox();
@@ -42,6 +43,10 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.lblGPA = new System.Windows.Forms.Label();
             this.lblGpaNumber = new System.Windows.Forms.Label();
+            this.picGpaSad = new System.Windows.Forms.PictureBox();
+            this.picGpaHappy = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picGpaSad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGpaHappy)).BeginInit();
             this.SuspendLayout();
             // 
             // lblInstruction
@@ -50,7 +55,7 @@
             this.lblInstruction.Location = new System.Drawing.Point(195, 19);
             this.lblInstruction.Name = "lblInstruction";
             this.lblInstruction.Size = new System.Drawing.Size(377, 20);
-            this.lblInstruction.TabIndex = 0;
+            this.lblInstruction.TabIndex = 11;
             this.lblInstruction.Text = "Enter Name and Letter Grade of Each Class Below: ";
             // 
             // txtClassName1
@@ -58,28 +63,28 @@
             this.txtClassName1.Location = new System.Drawing.Point(28, 87);
             this.txtClassName1.Name = "txtClassName1";
             this.txtClassName1.Size = new System.Drawing.Size(152, 26);
-            this.txtClassName1.TabIndex = 1;
+            this.txtClassName1.TabIndex = 0;
             // 
             // txtClassName4
             // 
             this.txtClassName4.Location = new System.Drawing.Point(587, 87);
             this.txtClassName4.Name = "txtClassName4";
             this.txtClassName4.Size = new System.Drawing.Size(157, 26);
-            this.txtClassName4.TabIndex = 2;
+            this.txtClassName4.TabIndex = 3;
             // 
             // txtClassName3
             // 
             this.txtClassName3.Location = new System.Drawing.Point(403, 87);
             this.txtClassName3.Name = "txtClassName3";
             this.txtClassName3.Size = new System.Drawing.Size(148, 26);
-            this.txtClassName3.TabIndex = 3;
+            this.txtClassName3.TabIndex = 2;
             // 
             // txtClassName2
             // 
             this.txtClassName2.Location = new System.Drawing.Point(213, 87);
             this.txtClassName2.Name = "txtClassName2";
             this.txtClassName2.Size = new System.Drawing.Size(152, 26);
-            this.txtClassName2.TabIndex = 4;
+            this.txtClassName2.TabIndex = 1;
             // 
             // cmbGrade1
             // 
@@ -90,10 +95,11 @@
             "C",
             "D",
             "F"});
-            this.cmbGrade1.Location = new System.Drawing.Point(44, 142);
+            this.cmbGrade1.Location = new System.Drawing.Point(38, 142);
             this.cmbGrade1.Name = "cmbGrade1";
-            this.cmbGrade1.Size = new System.Drawing.Size(121, 28);
-            this.cmbGrade1.TabIndex = 5;
+            this.cmbGrade1.Size = new System.Drawing.Size(128, 28);
+            this.cmbGrade1.TabIndex = 4;
+            this.cmbGrade1.Text = "Letter Grade:";
             // 
             // cmbGrade4
             // 
@@ -106,8 +112,9 @@
             "F"});
             this.cmbGrade4.Location = new System.Drawing.Point(606, 142);
             this.cmbGrade4.Name = "cmbGrade4";
-            this.cmbGrade4.Size = new System.Drawing.Size(121, 28);
-            this.cmbGrade4.TabIndex = 6;
+            this.cmbGrade4.Size = new System.Drawing.Size(130, 28);
+            this.cmbGrade4.TabIndex = 7;
+            this.cmbGrade4.Text = "Letter Grade:";
             // 
             // cmbGrade3
             // 
@@ -120,8 +127,9 @@
             "F"});
             this.cmbGrade3.Location = new System.Drawing.Point(415, 142);
             this.cmbGrade3.Name = "cmbGrade3";
-            this.cmbGrade3.Size = new System.Drawing.Size(121, 28);
-            this.cmbGrade3.TabIndex = 7;
+            this.cmbGrade3.Size = new System.Drawing.Size(125, 28);
+            this.cmbGrade3.TabIndex = 6;
+            this.cmbGrade3.Text = "Letter Grade:";
             // 
             // cmbGrade2
             // 
@@ -134,16 +142,17 @@
             "F"});
             this.cmbGrade2.Location = new System.Drawing.Point(227, 142);
             this.cmbGrade2.Name = "cmbGrade2";
-            this.cmbGrade2.Size = new System.Drawing.Size(121, 28);
-            this.cmbGrade2.TabIndex = 8;
+            this.cmbGrade2.Size = new System.Drawing.Size(127, 28);
+            this.cmbGrade2.TabIndex = 5;
+            this.cmbGrade2.Text = "Letter Grade:";
             // 
             // btnCalculate
             // 
-            this.btnCalculate.Location = new System.Drawing.Point(135, 249);
+            this.btnCalculate.Location = new System.Drawing.Point(130, 249);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(123, 31);
-            this.btnCalculate.TabIndex = 9;
-            this.btnCalculate.Text = "Calculate GPA";
+            this.btnCalculate.Size = new System.Drawing.Size(131, 38);
+            this.btnCalculate.TabIndex = 8;
+            this.btnCalculate.Text = "&Calculate GPA";
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
@@ -151,9 +160,9 @@
             // 
             this.btnClear.Location = new System.Drawing.Point(350, 249);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 31);
-            this.btnClear.TabIndex = 10;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Size = new System.Drawing.Size(75, 38);
+            this.btnClear.TabIndex = 9;
+            this.btnClear.Text = "C&lear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -161,35 +170,64 @@
             // 
             this.btnExit.Location = new System.Drawing.Point(537, 249);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 31);
-            this.btnExit.TabIndex = 11;
-            this.btnExit.Text = "Exit";
+            this.btnExit.Size = new System.Drawing.Size(75, 38);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblGPA
             // 
             this.lblGPA.AutoSize = true;
-            this.lblGPA.Location = new System.Drawing.Point(131, 301);
+            this.lblGPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblGPA.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.lblGPA.Location = new System.Drawing.Point(10, 343);
             this.lblGPA.Name = "lblGPA";
-            this.lblGPA.Size = new System.Drawing.Size(47, 20);
+            this.lblGPA.Size = new System.Drawing.Size(89, 38);
             this.lblGPA.TabIndex = 12;
             this.lblGPA.Text = "GPA:";
             // 
             // lblGpaNumber
             // 
             this.lblGpaNumber.AutoSize = true;
-            this.lblGpaNumber.Location = new System.Drawing.Point(184, 301);
+            this.lblGpaNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblGpaNumber.CausesValidation = false;
+            this.lblGpaNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.lblGpaNumber.Location = new System.Drawing.Point(121, 335);
             this.lblGpaNumber.Name = "lblGpaNumber";
-            this.lblGpaNumber.Size = new System.Drawing.Size(31, 20);
-            this.lblGpaNumber.TabIndex = 13;
-            this.lblGpaNumber.Text = "0.0";
+            this.lblGpaNumber.Size = new System.Drawing.Size(99, 48);
+            this.lblGpaNumber.TabIndex = 12;
+            this.lblGpaNumber.Text = "0.00";
+            // 
+            // picGpaSad
+            // 
+            this.picGpaSad.Image = ((System.Drawing.Image)(resources.GetObject("picGpaSad.Image")));
+            this.picGpaSad.Location = new System.Drawing.Point(288, 301);
+            this.picGpaSad.Name = "picGpaSad";
+            this.picGpaSad.Size = new System.Drawing.Size(199, 137);
+            this.picGpaSad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGpaSad.TabIndex = 13;
+            this.picGpaSad.TabStop = false;
+            this.picGpaSad.Visible = false;
+            // 
+            // picGpaHappy
+            // 
+            this.picGpaHappy.Image = ((System.Drawing.Image)(resources.GetObject("picGpaHappy.Image")));
+            this.picGpaHappy.Location = new System.Drawing.Point(288, 301);
+            this.picGpaHappy.Name = "picGpaHappy";
+            this.picGpaHappy.Size = new System.Drawing.Size(199, 137);
+            this.picGpaHappy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGpaHappy.TabIndex = 14;
+            this.picGpaHappy.TabStop = false;
+            this.picGpaHappy.Visible = false;
             // 
             // GPAForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.picGpaHappy);
+            this.Controls.Add(this.picGpaSad);
             this.Controls.Add(this.lblGpaNumber);
             this.Controls.Add(this.lblGPA);
             this.Controls.Add(this.btnExit);
@@ -206,6 +244,8 @@
             this.Controls.Add(this.lblInstruction);
             this.Name = "GPAForm";
             this.Text = "Student GPA Calculator";
+            ((System.ComponentModel.ISupportInitialize)(this.picGpaSad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGpaHappy)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +267,8 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblGPA;
         private System.Windows.Forms.Label lblGpaNumber;
+        private System.Windows.Forms.PictureBox picGpaSad;
+        private System.Windows.Forms.PictureBox picGpaHappy;
     }
 }
 
